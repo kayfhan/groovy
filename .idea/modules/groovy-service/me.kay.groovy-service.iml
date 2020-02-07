@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":groovy-service" external.linked.project.path="$MODULE_DIR$/../../../groovy-service" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="me.kay" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="ExternalSystem" externalSystem="GRADLE" externalSystemModuleGroup="me.kay" externalSystemModuleVersion="1.0-SNAPSHOT" linkedProjectId=":groovy-service" linkedProjectPath="$MODULE_DIR$/../../../groovy-service" rootProjectPath="$MODULE_DIR$/../../.." />
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../groovy-service">
+      <excludeFolder url="file://$MODULE_DIR$/../../../groovy-service/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../groovy-service/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../groovy-service/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,0 +1,140 @@
+// 配置阶段开始前的监听回掉
+plugins {
+    id 'war'
+}
+
+apply from: this.file('releaseInfo.gradle')
+apply plugin: 'me.kay.plugin'
+
+releaseInfo {
+    versionCode = '4.0.2'
+    versionName = "kay"
+    versionInfo = "this is first version."
+    fileName = "release.xml"
+}
+
+// 为应用程序添加第三方库依赖
+dependencies {
+    compile project(':groovy-service')
+    compile project(':groovy-dao')
+    compile fileTree(includes: ['*.jar'], dir: 'libs')
+//    {
+//        exclude module: '' // 排除第三方依赖，解决冲突问题
+//        exclude group: ''
+//    }
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.0'
+    providedCompile group: 'javax.servlet', name: 'jsp-api', version: '2.0'
+}
+
+//task('taskB') {
+//    mustRunAfter taskA
+////    shouldRunAfter taskA
+//    println 'taskB'
+//}
+
+//this.afterEvaluate { Project project ->
+//    def startBuildTime, endBuildTime
+//    project.tasks.each {
+//        Task task ->
+//        println "-------------"+task.getName()
+//    }
+//    def preBuildTask = project.tasks.getByName('compileJava')
+//    preBuildTask.doFirst {
+//        startBuildTime = System.currentTimeMillis()
+//        println "Start build time: ${startBuildTime}"
+//    }
+//    def buildTask = project.tasks.getByName('build')
+//    buildTask.doLast {
+//        endBuildTime = System.currentTimeMillis()
+//        println "Build time total: ${endBuildTime - startBuildTime}"
+//    }
+//}
+
+//task helloTask(group: 'kay', description: 'hello task') {
+//    doFirst{
+//        println 'I am helloTasks.'
+//    } 
+//    doLast{
+//        println 'I am helloTasks. last'
+//    }
+//}
+//
+//task taskA{
+//    println 'taskA'
+//}
+//
+//task taskB{
+//    println 'taskB'
+//}
+//task taskC(dependsOn: [taskA, taskB]){
+//    this.project.tasks.findAll {
+//        Task task->
+//            task.name.startsWith("lib")
+//    }
+//    println 'taskC'
+//}
+//task lib1{
+//    println 'lib1'
+//}
+//task lib2{
+//    println 'lib2'
+//}
+//task nolib{
+//    println 'nolib'
+//}
+
+//task('helloTask3', group: 'kay', description: 'hello task') {
+//    println 'I am helloTask.'
+//    doFirst{
+//        println 'I am helloTasks. first'
+//    }
+//    doLast{
+//        println 'I am helloTasks. last'
+//    }
+//}
+
+//this.tasks.create('helloTask2') {
+//    setGroup('kay')
+//    setDescription('hello task')
+//    println 'I am helloTask2.'
+//}
+
+//task('copyjar'){
+//    doLast {
+//        def sPath = project.getBuildDir().path + "/libs/"
+//        def dPath = '/Users/kay/workspace/java/proj/'
+//        def command = "mv -f ${sPath} ${dPath}"
+//        exec {
+//            try {
+//                executable 'bash'
+//                args '-c', command
+//                println 'mv successful.'
+//            }catch(GradleException e){
+//                println "copy error ${e.printStackTrace()}"
+//            }
+//        }
+//    }
+//}
+
+// 配置阶段开始前的监听回掉
+//this.afterEvaluate {
+////    println 'web --- afterEvaluate'
+//}
+//
+//this.getParentProject()
+//
+//def getParentProject() {
+//    Project project = this.getParent()
+////    println "Root project: ${project.name}"
+//}
+
+//copy {
+//    from getRootProject().file('common.gradle') 
+//    into getRootProject().getBuildDir() 
+//    exclude {
+//        
+//    }
+//    rename {
+//        
+//    }
+//}

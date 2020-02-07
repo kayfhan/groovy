@@ -1,0 +1,41 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : me.kay : groovy-web-1.0-SNAPSHOT.war (exploded)">
+    <output-path>$PROJECT_DIR$/groovy-web/build/libs/exploded/groovy-web-1.0-SNAPSHOT.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$">
+        <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/groovy-web/build/libs/exploded/groovy-web-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="groovy-web.me.kay.groovy-web.main/web/Web Gradle : groovy-web-1.0-SNAPSHOT.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="groovy-web.me.kay.groovy-web.main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/groovy-web/out/production/resources" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="me.kay-groovy-service-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="groovy-service.me.kay.groovy-service.main" />
+            <element id="dir-copy" path="$PROJECT_DIR$/groovy-service/out/production/resources" />
+          </element>
+          <element id="archive" name="me.kay-groovy-dao-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="groovy-dao.me.kay.groovy-dao.main" />
+            <element id="dir-copy" path="$PROJECT_DIR$/groovy-dao/out/production/resources" />
+          </element>
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:5.2.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-web:5.2.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:5.2.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:5.2.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:5.2.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:5.2.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:5.2.0.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-jcl:5.2.0.RELEASE" />
+          <element id="file-copy" path="$PROJECT_DIR$/groovy-web/libs/checker-compat-qual-2.0.0.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="buildSrc.me.kay.buildSrc.main" target="1.8" />
+      <module name="buildSrc.me.kay.buildSrc.test" target="1.8" />
+      <module name="groovy-dao.me.kay.groovy-dao.main" target="1.8" />
+      <module name="groovy-dao.me.kay.groovy-dao.test" target="1.8" />
+      <module name="groovy-service.me.kay.groovy-service.main" target="1.8" />
+      <module name="groovy-service.me.kay.groovy-service.test" target="1.8" />
+      <module name="groovy-utils.me.kay.groovy-utils.main" target="1.8" />
+      <module name="groovy-utils.me.kay.groovy-utils.test" target="1.8" />
+      <module name="groovy-web.me.kay.groovy-web.main" target="1.8" />
+      <module name="groovy-web.me.kay.groovy-web.test" target="1.8" />
+      <module name="groovy.buildSrc.main" target="1.8" />
+      <module name="groovy.buildSrc.test" target="1.8" />
+      <module name="groovy.main" target="1.8" />
+      <module name="groovy.test" target="1.8" />
+      <module name="me.kay.buildSrc.main" target="1.8" />
+      <module name="me.kay.buildSrc.test" target="1.8" />
+      <module name="me.kay.groovy-dao.main" target="1.8" />
+      <module name="me.kay.groovy-dao.test" target="1.8" />
+      <module name="me.kay.groovy-service.main" target="1.8" />
+      <module name="me.kay.groovy-service.test" target="1.8" />
+      <module name="me.kay.groovy-utils.main" target="1.8" />
+      <module name="me.kay.groovy-utils.test" target="1.8" />
+      <module name="me.kay.groovy-web.main" target="1.8" />
+      <module name="me.kay.groovy-web.test" target="1.8" />
+      <module name="me.kay.groovy.main" target="1.8" />
+      <module name="me.kay.groovy.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

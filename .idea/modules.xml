@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc.me.kay.buildSrc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc.me.kay.buildSrc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc.me.kay.buildSrc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc.me.kay.buildSrc.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-dao/groovy-dao.me.kay.groovy-dao.main.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-dao/groovy-dao.me.kay.groovy-dao.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-dao/groovy-dao.me.kay.groovy-dao.test.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-dao/groovy-dao.me.kay.groovy-dao.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-service/groovy-service.me.kay.groovy-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-service/groovy-service.me.kay.groovy-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-service/groovy-service.me.kay.groovy-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-service/groovy-service.me.kay.groovy-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-utils/groovy-utils.me.kay.groovy-utils.main.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-utils/groovy-utils.me.kay.groovy-utils.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-utils/groovy-utils.me.kay.groovy-utils.test.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-utils/groovy-utils.me.kay.groovy-utils.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-web/groovy-web.me.kay.groovy-web.main.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-web/groovy-web.me.kay.groovy-web.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-web/groovy-web.me.kay.groovy-web.test.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-web/groovy-web.me.kay.groovy-web.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/me.kay.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/me.kay.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/me.kay.buildSrc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/me.kay.buildSrc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/me.kay.buildSrc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/me.kay.buildSrc.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/me.kay.groovy.iml" filepath="$PROJECT_DIR$/.idea/modules/me.kay.groovy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-dao/me.kay.groovy-dao.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-dao/me.kay.groovy-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-dao/me.kay.groovy-dao.main.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-dao/me.kay.groovy-dao.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-dao/me.kay.groovy-dao.test.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-dao/me.kay.groovy-dao.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-service/me.kay.groovy-service.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-service/me.kay.groovy-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-service/me.kay.groovy-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-service/me.kay.groovy-service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-service/me.kay.groovy-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-service/me.kay.groovy-service.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-utils/me.kay.groovy-utils.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-utils/me.kay.groovy-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-utils/me.kay.groovy-utils.main.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-utils/me.kay.groovy-utils.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-utils/me.kay.groovy-utils.test.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-utils/me.kay.groovy-utils.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-web/me.kay.groovy-web.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-web/me.kay.groovy-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-web/me.kay.groovy-web.main.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-web/me.kay.groovy-web.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/groovy-web/me.kay.groovy-web.test.iml" filepath="$PROJECT_DIR$/.idea/modules/groovy-web/me.kay.groovy-web.test.iml" />
+    </modules>
+  </component>
+</project>

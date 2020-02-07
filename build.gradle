@@ -1,0 +1,140 @@
+//import me.kay.MyPlugin
+
+apply from: this.file('common.gradle')
+
+// 配置阶段开始前的监听回掉
+
+buildscript { ScriptHandler scriptHandler ->
+
+    // 工程的仓库地址
+    scriptHandler.repositories { RepositoryHandler repositoryHandler ->
+        repositoryHandler.jcenter()
+        repositoryHandler.mavenLocal()
+        repositoryHandler.mavenCentral()
+        repositoryHandler.maven { MavenArtifactRepository mavenArtifactRepository ->
+            mavenArtifactRepository.name ''
+            mavenArtifactRepository.url ''
+            mavenArtifactRepository.credentials {
+                username = ''
+                password = ''
+            }
+        }
+    }
+
+    // 工程的插件依赖地址
+    dependencies {
+//        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.4'
+    }
+
+    ext {
+//
+    }
+}
+this.java.
+
+//apply plugin: 'java'
+
+allprojects {
+    group 'me.kay'
+    version '1.0-SNAPSHOT'
+}
+
+subprojects {
+    // 配置阶段开始前的监听回掉
+    beforeEvaluate {
+//        println '----beforeEvaluate'
+    }
+
+    apply plugin: 'java'
+//    apply plugin: MyPlugin
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    // 为应用程序添加第三方库依赖
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+        compile group: 'org.springframework', name: 'spring-context', version: "${this.ext.java.springVersion}"
+        compile group: 'org.springframework', name: 'spring-web', version: "${this.ext.java.springVersion}"
+        compile group: 'org.springframework', name: 'spring-webmvc', version: "${this.ext.java.springVersion}"
+//        provider()  
+// provider： 占位编译，只在编译时起作用，在生成JAR/WAR包等时不会打包
+// compile编译时起作用，最终也会打进JAR/war等包中
+    }
+}
+
+fileTree(project('groovy-web').getBuildDir().path + '/libs/') {
+    FileTree fileTree ->
+        fileTree.visit {
+            FileTreeElement element ->
+                println "file name: ${element.name}"
+                copy {
+                    from element.file
+                    into getRootProject().getBuildDir().path + '/output'
+                }
+        }
+}
+
+//println copy('common.gradle')
+//def copy(String path){
+//    try{
+//        def file = file(path)
+//        return file.text
+//    }catch(GradleException e){
+//        println 'error'
+//    }
+//    return null
+//}
+
+//println project('groovy-web').group
+//project('groovy-web'){
+//    Project project ->
+//        apply plugin:'java'
+//        description 'groovy base project'
+//        dependencies {
+//
+//        }
+//}
+
+//getProjects()
+//
+//def getProjects() {
+//    println '------------------------'
+//    println '     Project name       '
+//    println '------------------------'
+//
+//    this.getAllprojects().eachWithIndex { Project project, int index ->
+//        if (index == 0) {
+//            println "Root Project: ${project.name}"
+//        } else {
+//            println "|---- Sub Project: ${project.name}"
+//        }
+//    }
+//}
+
+//this.getRootProj()
+//
+//def getRootProj() {
+//    Project project = this.getRootProject()
+//    println "---Root project---: ${project.name}"
+//}
+
+// 配置阶段完成以后的监听回掉
+this.afterEvaluate {
+//    println 'afterEvaluate'
+}
+// gradle执行完毕后的监听回掉
+this.gradle.buildFinished {
+//    println 'buildFinished'
+}
+
+this.gradle.beforeProject {
+//    println 'beforeProject'
+}
+this.gradle.afterProject {
+//    println 'afterProject'
+}
+this.gradle.addListener()

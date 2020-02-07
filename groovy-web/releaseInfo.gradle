@@ -1,0 +1,89 @@
+import groovy.xml.MarkupBuilder
+
+ext {
+    versionCode = '1.0.1'
+    versionName = 'kay'
+    versionInfo = 'this is a release version.'
+    destFile = file('release.xml')
+    if (this.destFile != null && !this.destFile.exists()) {
+        this.destFile.createNewFile()
+    }
+}
+
+task('writeTask') {
+    mustRunAfter 'build'
+    println '-------------------------------------------------------------------------'
+    inputs.property("versionCode", this.versionCode)
+    inputs.property("versionName", this.versionName)
+    inputs.property("versionInfo", this.versionInfo)
+    outputs.file(this.destFile)
+
+    doLast {
+        println '-------------------------------------------------------------------------'
+        def data = inputs.getProperties()
+        File file = outputs.getFiles().getSingleFile()
+        // map -> 对象
+        def versionMsg = new VersionMsg(data)
+        def sw = new StringWriter()
+        def xmlBuilder = new MarkupBuilder(sw)
+        if (file.text != null && file.text.size() <= 0) {
+            xmlBuilder.releasese {
+                release {
+                    versionCode(versionMsg.versionCode)
+                    versionName(versionMsg.versionName)
+                    versionInfo(versionMsg.versionInfo)
+                }
+            }
+            file.withWriter { write -> write.append(sw.toString()) }
+        } else {
+            xmlBuilder.release {
+                versionCode(versionMsg.versionCode)
+                versionName(versionMsg.versionName)
+                versionInfo(versionMsg.versionInfo)
+            }
+            // 将生成的节点数据插入到根结点之前
+            def lines = file.readLines()
+            def lengths = lines.size() - 1
+            file.withWriter { writer ->
+                lines.eachWithIndex { String line, int index ->
+                    if (index != lengths) {
+                        writer.append(line + '\r\n')
+                    } else if (index == lengths) {
+                        writer.append('\r\n' + sw.toString() + '\r\n')
+                        writer.append(lines.get(lengths))
+                    }
+                }
+            }
+        }
+    }
+}
+
+task('readerTask') {
+    inputs.file(this.destFile)
+    doLast {
+        def file = inputs.files.getSingleFile()
+        println file.text
+
+    }
+}
+
+class VersionMsg {
+    String versionCode
+    String versionName
+    String versionInfo
+}
+
+this.project.afterEvaluate {
+    def buildTask = this.tasks.getByName("build")
+    if (buildTask == null) throw new GradleException("error")
+//    buildTask.doLast {
+//        sources writeTask
+//    } 
+//    buildTask.finalizedBy(writeTask)
+}
+task readerWriterTest {
+    dependsOn readerTask, writeTask
+    doLast {
+        println "ok"
+    }
+}

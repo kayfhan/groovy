@@ -1,0 +1,8 @@
+rootProject.name = 'groovy'
+include 'groovy-web'
+include 'groovy-service'
+include 'groovy-dao'
+//if (hasProperty('isLoadUtilsProject') ? isLoadUtilsProject.toBoolean(): false){
+    include 'groovy-utils'
+//}
+
